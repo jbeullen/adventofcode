@@ -15,6 +15,8 @@ public class BottomProgram {
     public static final String INPUT_FILE = "day7_1.txt";
 
     public static void main(String [ ] args) {
+
+        //TODO: refactor & Test
         Set<String> notTopLevelPropgrams = new HashSet<>();
 
 
@@ -33,9 +35,6 @@ public class BottomProgram {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-
-        //notTopLevelPropgrams.stream().forEach(s -> System.out.println(s));
-
 
         try (Stream<String> stream = Files.lines(Paths.get(ClassLoader.getSystemResource(INPUT_FILE).toURI()))) {
 
